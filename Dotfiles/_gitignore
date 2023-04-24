@@ -1,0 +1,104 @@
+# Solidworks
+~$*
+~$*.SLDASM
+~$*.SLDPRT
+__Previews/
+*.CWR
+*.DSP
+*.ELF
+*.GCF
+*.GEN
+*.IDA
+*.LCD
+*.LDS
+*.LOG
+*.MAS
+*.MFC
+*.OUT
+*.PC0
+*.SL3
+*.SL4
+*.STE
+*.STG
+PerformanceLog.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# CAE
+netgen.prof
+*.pvtu
+*.vtu
+partitioning.*/
+
+# Movie
+*.avi
+*.mp4
+*.mpg
+*.mpeg
+
+# Blender
+*.BMC
+*.hdr
+*.rsl
+
+### Libreoffice
+*.odp#
+
+# Wondows
+*.lnk
+
+# PTC Creo
+ApplicationSettings.db
+std.out
+current_session.pro
+datafile.ers
+errors.lst.*
+fix_params.log
+*.acc
+*.crc
+*.err.*
+*.idx
+*.inf.*
+*.log.*
+std.err
+std.out
+trail.txt
+trail.txt.*
+*.xpr
+*.tst
+*.acl
+*.lst
+*.mbx
+*.ncl.*
+*.ncl_a.tab
+*.ncl_b.tab
+*.ncl_c.tab
+*.ncl_x.tab
+*.ncl_y.tab
+*.ncl_z.tab
+*.tap
+*.m_p
+*.idx
+*.log
+*.lsl.*
+*.bak
+*.pcf
+*.inf
+*.xml
+*.pbk
+
+# 2D CAD
+[#]*.dxf
+*.dwl
+*dwl2
+*.dxf.original
+
+# Compiler
+build/
+
+# Backup
+*.bak
+
+# github CLI
+.current_user
