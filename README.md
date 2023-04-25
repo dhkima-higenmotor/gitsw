@@ -7,7 +7,7 @@ _Github Client for Sloidworks_
 ### 1. Git for Windows Portable
 * Make folder `D:\UTIL`
 * Download `64-bit Git for Windows Portable` in https://git-scm.com/download/win 
-* Move & Extract as D:\UTIL\Git`
+* Move & Extract into `D:\UTIL\Git`
 
 ### 2. Github CLI
 * Download  & Install `msi` file from https://cli.github.com/
@@ -15,7 +15,7 @@ _Github Client for Sloidworks_
 
 ### 3. Anaconda
 * https://www.anaconda.com/download/
-* Download and Install
+* Download and Install into `D:\UTIL\anaconda3`
 
 ### 4. Windows Terminal
 * Execution : `wt.exe`
@@ -30,6 +30,12 @@ _Github Client for Sloidworks_
   - Command : `D:\UTIL\Git\git-bash.exe -i -l`
   - Start : `D:\`
   - Icon : `D:\UTIL\Git\mingw64\share\git\git-for-windows.ico`
+
+* New Profiles : Anaconda3
+  - Name : `Anaconda3`
+  - Command : `%windir%\System32\cmd.exe "/K" D:\UTIL\anaconda3\Scripts\activate.bat D:\UTIL\anaconda3`
+  - Start : `D:\`
+  - Icon : `D:\UTIL\anaconda3\Menu\anaconda-navigator.ico`
 
 
 ## Config
