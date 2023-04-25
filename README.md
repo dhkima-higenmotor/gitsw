@@ -13,11 +13,7 @@ _Github Client for Sloidworks_
 * Download  & Install `msi` file from https://cli.github.com/
 * Auth Environment Variable : `GH_TOKEN`
 
-### 3. Anaconda
-* https://www.anaconda.com/download/
-* Download and Install into `D:\UTIL\anaconda3`
-
-### 4. Windows Terminal
+### 3. Windows Terminal
 * Execution : `wt.exe`
 * New Profiles : git-cmd
   - Name : `git-cmd`
@@ -64,4 +60,18 @@ git config --global init.defaultBranch main
 gh config set editor "code -w"
 gh config set git_protocol https
 # gh auth login
+```
+
+## Requirements to Development
+
+### 1. Anaconda
+* https://www.anaconda.com/download/
+* Download and Install into `D:\UTIL\anaconda3`
+
+### 2. Python Libraries
+
+```
+pip install PySimpleGUI
+pip install GitPython
+pip install github-cli
 ```

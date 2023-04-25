@@ -1,25 +1,36 @@
-import PySimpleGUI as sg      
+import PySimpleGUI as sg
+import os
 
-sg.theme('DarkBlue3')
-sg.set_options(font='D2Coding 12')
+# Internal functions
+import git_operation
 
+# Theme
+sg.theme(git_operation.read_config('theme')[0])
+sg.set_options(font=git_operation.read_config('font')[0])
+
+# Config
 NAME_SIZE = 17
 BUTTON_WIDTH = 8
 INPUT_WIDTH = 40
 OUTPUT_WIDTH = 60
-LIST_MODE = ['LEADER', 'MEMBER']
-LIST_USERS = ['dhkima-higenmotor', 'bbahn', 'ugjaea', 'cuan']
-LIST_ORGANS = ['mech-higenmotor']
-LIST_REPOS = ['NEW_TEST', 'ARES-W', 'ARES-P']
+LIST_MODE = git_operation.read_config('modes')
+LIST_USERS = git_operation.read_config('users')
+LIST_ORGANS = git_operation.read_config('organs')
+LIST_ORGANS.extend(LIST_USERS)
+LIST_REPOS = git_operation.read_config('repos')
 LIST_BRANCH = LIST_USERS.copy()
 LIST_BRANCH.insert(0,'main')
-LIST_COMMIT = ['Minor Update', 'PDR', 'CDR', 'Drawing', 'Production']
-OUTPUT = 'Welcome to Github Client for Solidworks.\nLocked files are ignored.\nThank you.'
+LIST_COMMIT = git_operation.read_config('commits')
+SERVER = git_operation.read_config('server')[0]
+ROOT = git_operation.read_config('root')[0]
+TOKEN = git_operation.read_config('token')[0]
 
+# GUI Name Width
 def name(name):
     dots = NAME_SIZE-len(name)-2
-    return sg.Text(name + ' ' + ' '*dots, size=(NAME_SIZE,1), justification='r',pad=(0,0))
+    return sg.Text(name+' '*dots,size=(NAME_SIZE,1),justification='r',pad=(0,0))
 
+# GUI Layout
 left_column = [
     [name('1.MODE'), sg.Combo(values=LIST_MODE,default_value=LIST_MODE[0],size=(INPUT_WIDTH,1),key='-MODE-',enable_events=True)],
     [name('2.USER'), sg.Combo(values=LIST_USERS,default_value=LIST_USERS[0],size=(INPUT_WIDTH,1),key='-USER-',enable_events=True)],
@@ -67,9 +78,9 @@ while True:
     elif event=='-MAKE-':
         print(values)
     elif event=='-CLONE-':
-        print(values)
+        git_operation.git_clone(SERVER,values["-ORGAN-"],values["-REPO-"],values["-USER-"],TOKEN,ROOT)
     elif event=='-PULL-':
-        print(values)
+        git_operation.git_pull(values["-REPO-"],ROOT)
     elif event=='-CHANGE_BRANCH-':
         print(values)
     elif event=='-CHANGE_MERGE-':
