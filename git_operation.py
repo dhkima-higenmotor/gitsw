@@ -46,11 +46,11 @@ def git_make(server,organ,repo,user,token,root,gitpath):
     if error==0:
         print("# Initializing... \n")
         os.system(gitpath+"\git.exe lfs install")
-        os.system("copy ./Dotfiles/_gitattribute "+PATH_TARGET+"/.gitattribute")
-        os.system("copy ./Dotfiles/_gitignore "+PATH_TARGET+"/.gitignore")
-        os.system("echo "+"# "+repo+">"+PATH_TARGET+"/README.md")
-        os.system("mkdir "+PATH_TARGET+"/3D")
-        os.system("echo "+"# "+repo+">"+PATH_TARGET+"/3D/README.md")
+        os.system("copy .\\Dotfiles\\_gitattribute "+PATH_TARGET+"\\.gitattribute")
+        os.system("copy .\\Dotfiles\\_gitignore "+PATH_TARGET+"\\.gitignore")
+        os.system("echo "+"# "+repo+">"+PATH_TARGET+"\\README.md")
+        #os.system("mkdir "+PATH_TARGET+"/3D")
+        os.system("echo "+"# "+repo+">"+PATH_TARGET+"\\3D\\README.md")
         # 1st Push
         print("# Pushing... \n")
         os.system(gitpath+"\git.exe add --all")
