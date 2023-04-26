@@ -1,7 +1,14 @@
+# Directory
+!/3D/
+
 # Documents
-!*.md
-!*.MD
-!*.markdown
+!/.gitattribute
+!/.gitignore
+
+# Documents
+!/*.md
+!/*.MD
+!/*.markdown
 
 # Solidworks
 !*.SLDASM
