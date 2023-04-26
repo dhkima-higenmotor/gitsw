@@ -64,6 +64,7 @@ def git_make(server,organ,repo,user,token,root,gitpath,exepath):
         os.system(gitpath+"\git.exe commit -m \"1st\"")
         print(gitpath+"\git.exe commit -m \"1st\"")
         os.system(gitpath+"\git.exe push")
+        print(gitpath+"\git.exe push")
         #os.system(gitpath+"\git.exe push --set-upstream origin HEAD")
         #print(gitpath+"\git.exe push --set-upstream origin HEAD")
         print("# Finished. \n")
