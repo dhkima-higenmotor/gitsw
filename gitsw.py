@@ -9,10 +9,10 @@ sg.theme(git_operation.read_config('theme')[0])
 sg.set_options(font=git_operation.read_config('font')[0])
 
 # Config
-NAME_SIZE = 17
+NAME_SIZE = 16
 BUTTON_WIDTH = 8
-INPUT_WIDTH = 30
-OUTPUT_WIDTH = 50
+INPUT_WIDTH = 27
+OUTPUT_WIDTH = 40
 LIST_USERS = git_operation.read_config('users')
 LIST_ORGANS = git_operation.read_config('organs')
 LIST_ORGANS.extend(LIST_USERS)
@@ -49,7 +49,7 @@ left_column = [
 
 right_column = [
     [name('OUTPUT')],
-    [sg.Output(key='-OUTPUT-',size=(OUTPUT_WIDTH,19))],
+    [sg.Output(key='-OUTPUT-',size=(OUTPUT_WIDTH,13))],
     [sg.Button('CLEAR',key='-CLEAR-',size=(BUTTON_WIDTH,1)), sg.Button('ABOUT',key='-ABOUT-',size=(BUTTON_WIDTH,1)), sg.Button('EXIT',key='-EXIT-',size=(BUTTON_WIDTH,1))]
 ]
 
