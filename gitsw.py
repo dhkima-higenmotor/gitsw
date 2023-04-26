@@ -83,7 +83,7 @@ while True:
     elif event=='-MERGE-':
         git_operation.git_merge(values["-REPO-"],ROOT,GITPATH,values["-CHANGE_BRANCH-"],values["-CHANGE_MERGE-"])
     elif event=='-SLDWORKS-':
-        git_operation.sw_start(values["-REPO-"],ROOT)
+        git_operation.sw_start()
     elif event=='-FILES-':
         git_operation.files_start(values["-REPO-"],ROOT)
     #elif event=='-COMMIT_MESSAGE-':

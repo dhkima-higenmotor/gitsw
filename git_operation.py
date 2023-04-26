@@ -14,10 +14,8 @@ def current_path():
     f.close()
     return currentpath
 
-def sw_start(repo,root):
-    PATH_TARGET = root+"\\"+repo
+def sw_start():
     SLDWORKS = "C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\SLDWORKS.exe"
-    os.chdir(PATH_TARGET)
     os.system('"'+SLDWORKS+'"')
     return 0
 
