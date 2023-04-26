@@ -24,6 +24,7 @@ LIST_COMMIT = git_operation.read_config('commits')
 SERVER = git_operation.read_config('server')[0]
 ROOT = git_operation.read_config('root')[0]
 TOKEN = git_operation.read_config('token')[0]
+os.system("set GH_TOKEN="+TOKEN)
 GITPATH = git_operation.read_config('gitpath')[0]
 
 # GUI Name Width
