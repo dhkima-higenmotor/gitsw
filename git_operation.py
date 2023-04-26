@@ -36,7 +36,6 @@ def git_clone(server,organ,repo,user,token,root,gitpath):
     URL_SOURCE = "https://"+user+":"+token+"@"+server+"/"+organ+"/"+repo+".git"
     #URL_SOURCE = "https://"+server+"/"+organ+"/"+repo+".git"
     PATH_TARGET = root+"\\"+repo
-    #os.chdir(PATH_TARGET)
     if os.path.isdir(PATH_TARGET):
         print("# Already exist : "+PATH_TARGET)
         return -1
@@ -44,14 +43,15 @@ def git_clone(server,organ,repo,user,token,root,gitpath):
         print("# Clone starts from : \n"+URL_SOURCE)
         os.system(gitpath+"\git.exe clone "+URL_SOURCE+" "+PATH_TARGET)
         print(gitpath+"\git.exe clone "+URL_SOURCE+" "+PATH_TARGET)
+        os.chdir(PATH_TARGET)
         os.system(gitpath+"\git.exe lfs install --local")
         print(gitpath+"\git.exe lfs install --local")
         return 0
 
 def git_pull(repo,root,gitpath):
     PATH_TARGET = root+"\\"+repo
-    os.chdir(PATH_TARGET)
     if os.path.isdir(PATH_TARGET):
+        os.chdir(PATH_TARGET)
         os.system(gitpath+"\git.exe fetch --all")
         print(gitpath+"\git.exe fetch --all")
         os.system(gitpath+"\git.exe pull --all")
@@ -76,8 +76,8 @@ def git_make(server,organ,repo,user,token,root,gitpath,exepath):
         # Clone
         error = git_clone(server,organ,repo,user,token,root,gitpath)
         print("# Clone to : \n"+PATH_TARGET)
+        os.chdir(PATH_TARGET)
         # Init
-        error = 0
         if error==0:
             print("# Initializing... \n")
             os.system(gitpath+"\git.exe lfs install --local")
@@ -99,7 +99,9 @@ def git_make(server,organ,repo,user,token,root,gitpath,exepath):
             print(gitpath+"\git.exe commit -m \"1st\"")
             os.system(gitpath+"\git.exe push --set-upstream origin HEAD")
             print(gitpath+"\git.exe push --set-upstream origin HEAD")
-            print("# Finished. \n")
+            print("\n")
+            print("Check [Archives]:[Include Git LFS objects in archives] in this address :\n")
+            print("https://"+server+"/"+organ+"/"+repo+"/settings")
             return 0
         else:
             print("# Fail. \n")

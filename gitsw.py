@@ -11,8 +11,8 @@ sg.set_options(font=git_operation.read_config('font')[0])
 # Config
 NAME_SIZE = 17
 BUTTON_WIDTH = 8
-INPUT_WIDTH = 40
-OUTPUT_WIDTH = 60
+INPUT_WIDTH = 30
+OUTPUT_WIDTH = 50
 LIST_USERS = git_operation.read_config('users')
 LIST_ORGANS = git_operation.read_config('organs')
 LIST_ORGANS.extend(LIST_USERS)
