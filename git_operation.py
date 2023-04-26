@@ -36,7 +36,8 @@ def git_make(server,organ,repo,user,token,root,gitpath):
     URL_SOURCE = "https://"+server+"/"+organ+"/"+repo+".git"
     PATH_TARGET = root+"/"+repo
     # Make new repository on Github.com
-    os.system("gh repo create --internal "+organ+"/"+repo)
+    os.system("gh repo create --public "+repo)
+    #os.system("gh repo create --internal "+organ+"/"+repo)
     print("# Made new remote repository : \n"+URL_SOURCE)
     # Clone
     error = git_clone(server,organ,repo,user,token,root,gitpath)
