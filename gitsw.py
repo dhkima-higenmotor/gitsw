@@ -13,7 +13,6 @@ NAME_SIZE = 17
 BUTTON_WIDTH = 8
 INPUT_WIDTH = 40
 OUTPUT_WIDTH = 60
-LIST_MODE = git_operation.read_config('modes')
 LIST_USERS = git_operation.read_config('users')
 LIST_ORGANS = git_operation.read_config('organs')
 LIST_ORGANS.extend(LIST_USERS)
@@ -36,23 +35,20 @@ def name(name):
 
 # GUI Layout
 left_column = [
-    [name('1.MODE'), sg.Combo(values=LIST_MODE,default_value=LIST_MODE[0],size=(INPUT_WIDTH,1),key='-MODE-',enable_events=True)],
-    [name('2.USER'), sg.Combo(values=LIST_USERS,default_value=LIST_USERS[0],size=(INPUT_WIDTH,1),key='-USER-',enable_events=True)],
-    [name('3.ORGANIZATION'), sg.Combo(values=LIST_ORGANS,default_value=LIST_ORGANS[0],size=(INPUT_WIDTH,1),key='-ORGAN-',enable_events=True)],
-    [name('4.REPOSITORY'), sg.Combo(values=LIST_REPOS,default_value=LIST_REPOS[0],size=(INPUT_WIDTH,1),key='-REPO-',enable_events=True)],
+    [name('1.USER'), sg.Combo(values=LIST_USERS,default_value=LIST_USERS[0],size=(INPUT_WIDTH,1),key='-USER-',enable_events=True)],
+    [name('2.ORGANIZATION'), sg.Combo(values=LIST_ORGANS,default_value=LIST_ORGANS[0],size=(INPUT_WIDTH,1),key='-ORGAN-',enable_events=True)],
+    [name('3.REPOSITORY'), sg.Combo(values=LIST_REPOS,default_value=LIST_REPOS[0],size=(INPUT_WIDTH,1),key='-REPO-',enable_events=True)],
     [name(''), sg.Button('MAKE',key='-MAKE-',size=(BUTTON_WIDTH,1)), sg.Button('CLONE',key='-CLONE-',size=(BUTTON_WIDTH,1)), sg.Button('PULL',key='-PULL-',size=(BUTTON_WIDTH,1))],
-    [name('5.BRANCH'), sg.Combo(values=LIST_BRANCH,default_value=LIST_BRANCH[0],size=(INPUT_WIDTH,1),key='-CHANGE_BRANCH-',enable_events=True)],
-    [name('6.MERGE'), sg.Combo(values=LIST_BRANCH,default_value=LIST_BRANCH[1],size=(INPUT_WIDTH,1),key='-CHANGE_MERGE-',enable_events=True)],
+    [name('4.BRANCH'), sg.Combo(values=LIST_BRANCH,default_value=LIST_BRANCH[0],size=(INPUT_WIDTH,1),key='-CHANGE_BRANCH-',enable_events=True)],
+    [name('5.MERGE ↑'), sg.Combo(values=LIST_BRANCH,default_value=LIST_BRANCH[1],size=(INPUT_WIDTH,1),key='-CHANGE_MERGE-',enable_events=True)],
     [name(''), sg.Button('MERGE',key='-MERGE-',size=(BUTTON_WIDTH,1))],
-    [name('7.LOCK'), sg.Button('LOCK',key='-LOCK-',size=(BUTTON_WIDTH,1)), sg.Button('UNLOCK',key='-UNLOCK-',size=(BUTTON_WIDTH,1))],
-    [name('8.SOLIDWORKS'), sg.Button('START',key='-START-',size=(BUTTON_WIDTH,1))],
-    [name('9.ADD'), sg.Button('ADD',key='-ADD-',size=(BUTTON_WIDTH,1)), sg.Button('ADD_ALL',key='-ADD_ALL-',size=(BUTTON_WIDTH,1))],
-    [name('10.COMMIT+PUSH'), sg.Combo(values=LIST_COMMIT,default_value=LIST_COMMIT[0],size=(INPUT_WIDTH,1),key='-COMMIT_MESSAGE-',enable_events=True)],
-    [name(''), sg.Button('COMMIT',key='-COMMIT-',size=(BUTTON_WIDTH,1)), sg.Button('PUSH',key='-PUSH-',size=(BUTTON_WIDTH,1))]
+    [name('6.START'), sg.Button('SLDWORKS',key='-SLDWORKS-',size=(BUTTON_WIDTH,1)), sg.Button('FILES',key='-FILES-',size=(BUTTON_WIDTH,1))],
+    [name('7.PUSH'), sg.Combo(values=LIST_COMMIT,default_value=LIST_COMMIT[0],size=(INPUT_WIDTH,1),key='-COMMIT_MESSAGE-',enable_events=True)],
+    [name(''), sg.Button('PUSH',key='-PUSH-',size=(BUTTON_WIDTH,1))]
 ]
 
 right_column = [
-    [name('11.OUTPUT')],
+    [name('OUTPUT')],
     [sg.Output(key='-OUTPUT-',size=(OUTPUT_WIDTH,19))],
     [sg.Button('CLEAR',key='-CLEAR-',size=(BUTTON_WIDTH,1)), sg.Button('ABOUT',key='-ABOUT-',size=(BUTTON_WIDTH,1)), sg.Button('EXIT',key='-EXIT-',size=(BUTTON_WIDTH,1))]
 ]
@@ -71,14 +67,10 @@ while True:
     event, values = window.read() 
     if event==sg.WIN_CLOSED or event=='-EXIT-':
         break
-    elif event=='-MODE-':
-        print(values)
-    elif event=='-USER-':
-        print(values)
-    elif event=='-ORGAN-':
-        print(values)
-    elif event=='-REPO-':
-        print(values)
+    #elif event=='-USER-':
+        #print(values)
+    #elif event=='-ORGAN-':
+    #elif event=='-REPO-':
     elif event=='-MAKE-':
         git_operation.git_make(SERVER,values["-ORGAN-"],values["-REPO-"],values["-USER-"],TOKEN,ROOT,GITPATH,EXEPATH)
     elif event=='-CLONE-':
@@ -86,27 +78,17 @@ while True:
     elif event=='-PULL-':
         git_operation.git_pull(values["-REPO-"],ROOT,GITPATH)
     elif event=='-CHANGE_BRANCH-':
-        print(values)
-    elif event=='-CHANGE_MERGE-':
-        print(values)
+        git_operation.git_branch(values["-REPO-"],ROOT,GITPATH,values["-CHANGE_BRANCH-"])
+    #elif event=='-CHANGE_MERGE-':
     elif event=='-MERGE-':
-        print(values)
-    elif event=='-LOCK-':
-        print(values)
-    elif event=='-UNLOCK-':
-        print(values)
-    elif event=='-START-':
-        print(values)
-    elif event=='-ADD-':
-        print(values)
-    elif event=='-ADD_ALL-':
-        print(values)
-    elif event=='-COMMIT_MESSAGE-':
-        print(values)
-    elif event=='-COMMIT-':
-        print(values)
+        git_operation.git_merge(values["-REPO-"],ROOT,GITPATH,values["-CHANGE_BRANCH-"],values["-CHANGE_MERGE-"])
+    elif event=='-SLDWORKS-':
+        git_operation.sw_start(values["-REPO-"],ROOT)
+    elif event=='-FILES-':
+        git_operation.files_start(values["-REPO-"],ROOT)
+    #elif event=='-COMMIT_MESSAGE-':
     elif event=='-PUSH-':
-        print(values)
+        git_operation.git_push(values["-REPO-"],ROOT,GITPATH,values["-COMMIT_MESSAGE-"],values["-CHANGE_BRANCH-"])
     elif event=='-CLEAR-':
         window['-OUTPUT-'].update('')    
     elif event=='-ABOUT-':
