@@ -72,6 +72,5 @@ gh config set git_protocol https
 
 ```
 pip install PySimpleGUI
-pip install GitPython
-pip install github-cli
+pip install github
 ```

@@ -24,6 +24,7 @@ LIST_COMMIT = git_operation.read_config('commits')
 SERVER = git_operation.read_config('server')[0]
 ROOT = git_operation.read_config('root')[0]
 TOKEN = git_operation.read_config('token')[0]
+GITPATH = git_operation.read_config('gitpath')[0]
 
 # GUI Name Width
 def name(name):
@@ -76,11 +77,11 @@ while True:
     elif event=='-REPO-':
         print(values)
     elif event=='-MAKE-':
-        print(values)
+        git_operation.git_make(SERVER,values["-ORGAN-"],values["-REPO-"],values["-USER-"],TOKEN,ROOT,GITPATH)
     elif event=='-CLONE-':
-        git_operation.git_clone(SERVER,values["-ORGAN-"],values["-REPO-"],values["-USER-"],TOKEN,ROOT)
+        git_operation.git_clone(SERVER,values["-ORGAN-"],values["-REPO-"],values["-USER-"],TOKEN,ROOT,GITPATH)
     elif event=='-PULL-':
-        git_operation.git_pull(values["-REPO-"],ROOT)
+        git_operation.git_pull(values["-REPO-"],ROOT,GITPATH)
     elif event=='-CHANGE_BRANCH-':
         print(values)
     elif event=='-CHANGE_MERGE-':
