@@ -110,19 +110,28 @@ def git_make(server,organ,repo,user,token,root,gitpath,exepath):
 
 def git_push(repo,root,gitpath,commit_message,change_branch):
     PATH_TARGET = root+"\\"+repo
-    os.chdir(PATH_TARGET)
-    os.system(gitpath+"\git.exe checkout "+change_branch)
-    print(gitpath+"\git.exe checkout "+change_branch)
-    os.system(gitpath+"\git.exe add --all")
-    print(gitpath+"\git.exe add --all")
-    os.system(gitpath+"\git.exe commit -m \""+commit_message+"\"")
-    print(gitpath+"\git.exe commit -m \""+commit_message+"\"")
-    os.system(gitpath+"\git.exe push --all")
-    print(gitpath+"\git.exe push --all")
-    #os.system(gitpath+"\git.exe push -u origin "+change_branch)
-    #print(gitpath+"\git.exe push -u origin "+change_branch)
-    print("\n# Push Finished. \n")
-    return 0
+    if os.path.isdir(PATH_TARGET):
+        try:
+            os.chdir(PATH_TARGET)
+            os.system(gitpath+"\git.exe checkout "+change_branch)
+            print(gitpath+"\git.exe checkout "+change_branch)
+            os.system(gitpath+"\git.exe add --all")
+            print(gitpath+"\git.exe add --all")
+            os.system(gitpath+"\git.exe commit -m \""+commit_message+"\"")
+            print(gitpath+"\git.exe commit -m \""+commit_message+"\"")
+            os.system(gitpath+"\git.exe push --all")
+            print(gitpath+"\git.exe push --all")
+            #os.system(gitpath+"\git.exe push -u origin "+change_branch)
+            #print(gitpath+"\git.exe push -u origin "+change_branch)
+            print("\n# Push Finished. \n")
+        return 0
+        except:
+            print("\n# No Repo : "+URL_SOURCE2)
+            return -2
+    else:
+        print("\n# Not exists : \n"+PATH_TARGET)
+        return -1
+
 
 def git_branch(repo,root,gitpath,change_branch):
     PATH_TARGET = root+"\\"+repo
