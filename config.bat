@@ -5,7 +5,7 @@ call %root%\Scripts\activate.bat %root%
 
 REM call conda env list
 call conda activate base
-call cd D:\codeberg\gitsw
+call cd D:\github\gitsw
 call python config.py
 
 REM pause

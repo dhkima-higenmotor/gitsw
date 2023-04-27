@@ -45,8 +45,8 @@ def display(file_name):
  
 # Save Config
 def save_config():
-    for i in ["-FONT-", "-GITPATH-", "-ROOT-", "-SERVER-", "-THEME-", "-TOKEN-", "-LIST_COMMIT-", "-LIST_ORGANS-", "-LIST_REPOS-"]:
-        if values[i] == 1:
+    for i in ["-FONT-", "-GITPATH-", "-ROOT-", "-SERVER-", "-THEME-", "-TOKEN-", "-LIST_COMMIT-", "-LIST_ORGANS-", "-LIST_REPOS-", "-LIST_USERS-"]:
+        if values[i] == True:
             file_name = i
             file_name = file_name.strip("-")
             file_name = file_name.lower()
@@ -107,7 +107,8 @@ while True:
     elif event=='-LIST_ORGANS-':
         display('list_organs')
     elif event=='-LIST_REPOS-':
-        display('list_repos')
+        #display('list_repos')
+        window['-OUTPUT-'].update("wgfwergfew????????????????")
     elif event=='-SAVE-':
         save_config()
 
