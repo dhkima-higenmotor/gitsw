@@ -124,7 +124,7 @@ def git_push(repo,root,gitpath,commit_message,change_branch):
             #os.system(gitpath+"\git.exe push -u origin "+change_branch)
             #print(gitpath+"\git.exe push -u origin "+change_branch)
             print("\n# Push Finished. \n")
-        return 0
+            return 0
         except:
             print("\n# No Repo : "+URL_SOURCE2)
             return -2
