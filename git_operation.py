@@ -32,19 +32,22 @@ def files_start(repo,root):
 
 def git_clone(server,organ,repo,user,token,root,gitpath):
     URL_SOURCE = "https://"+user+":"+token+"@"+server+"/"+organ+"/"+repo+".git"
-    #URL_SOURCE = "https://"+server+"/"+organ+"/"+repo+".git"
+    URL_SOURCE2 = "https://"+server+"/"+organ+"/"+repo+".git"
     PATH_TARGET = root+"\\"+repo
     if os.path.isdir(PATH_TARGET):
         print("# Already exist : "+PATH_TARGET)
         return -1
     else:
         print("# Clone starts from : \n"+URL_SOURCE)
-        os.system(gitpath+"\git.exe clone "+URL_SOURCE+" "+PATH_TARGET)
-        print(gitpath+"\git.exe clone "+URL_SOURCE+" "+PATH_TARGET)
-        os.chdir(PATH_TARGET)
-        os.system(gitpath+"\git.exe lfs install --local")
-        print(gitpath+"\git.exe lfs install --local")
-        return 0
+        try:
+            os.system(gitpath+"\git.exe clone "+URL_SOURCE+" "+PATH_TARGET)
+            print(gitpath+"\git.exe clone "+URL_SOURCE+" "+PATH_TARGET)
+            os.chdir(PATH_TARGET)
+            os.system(gitpath+"\git.exe lfs install --local")
+            print(gitpath+"\git.exe lfs install --local")
+            return 0
+        except:
+            print("No Repo : "+URL_SOURCE2)
 
 def git_pull(repo,root,gitpath):
     PATH_TARGET = root+"\\"+repo
