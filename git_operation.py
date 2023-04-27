@@ -42,7 +42,7 @@ def git_clone(server,organ,repo,user,token,root,gitpath):
             print("\n# Clone starts from : \n"+URL_SOURCE)
             os.system(gitpath+"\git.exe clone "+URL_SOURCE+" "+PATH_TARGET)
             print(gitpath+"\git.exe clone "+URL_SOURCE2+" "+PATH_TARGET)
-            os.chdir(PATH_TARGET)
+            os.chdir("'"+PATH_TARGET+"'")
             os.system(gitpath+"\git.exe lfs install --local")
             print(gitpath+"\git.exe lfs install --local")
             return 0
