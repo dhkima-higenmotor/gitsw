@@ -47,7 +47,9 @@ def git_clone(server,organ,repo,user,token,root,gitpath):
             print(gitpath+"\git.exe lfs install --local")
             return 0
         except:
-            print("No Repo : "+URL_SOURCE2)
+            print("")
+            print("# No Repo : "+URL_SOURCE2)
+            return -2
 
 def git_pull(repo,root,gitpath):
     PATH_TARGET = root+"\\"+repo
