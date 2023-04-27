@@ -93,26 +93,6 @@ trail.txt.*
 *.dwl
 *dwl2
 *.dxf.original
-*.dxf
-*.DXF
-*.dwg
-*.DWG
-
-# DOC
-*.pdf
-*.PDF
-
-# 3D
-*.stp
-*.STP
-*.step
-*.STEP
-*.igs
-*.IGS
-*.iges
-*.IGES
-*.stl
-*.STL
 
 # Compiler
 build/
