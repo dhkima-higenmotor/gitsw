@@ -102,11 +102,13 @@ def git_make(server,organ,repo,user,token,root,gitpath,exepath):
             # 1st Push
             os.system(gitpath2+" add --all")
             print("\n"+gitpath2+" add --all")
-            os.system(gitpath2+" commit -m \"1st\"")
-            print("\n"+gitpath2+" commit -m \"1st\"")
+            os.system(gitpath2+" commit -m '1st'")
+            print("\n"+gitpath2+" commit -m '1st'")
             os.system(gitpath2+" push --set-upstream origin HEAD")
             print("\n"+gitpath2+" push --set-upstream origin HEAD")
-            print("\nCheck [Archives]:[Include Git LFS objects in archives] in this address :\n")
+            print("\n# Check [Archives]:[Include Git LFS objects in archives] in this address :\n")
+            print("https://"+server+"/"+organ+"/"+repo+"/settings")
+            print("\n# Check Repository Setting to use LFS :")
             print("https://"+server+"/"+organ+"/"+repo+"/settings")
             return 0
         else:
@@ -123,8 +125,8 @@ def git_push(repo,root,gitpath,commit_message,change_branch):
             print("\n"+gitpath2+" checkout "+change_branch)
             os.system(gitpath2+" add --all")
             print("\n"+gitpath2+" add --all")
-            os.system(gitpath2+" commit -m \""+commit_message+"\"")
-            print("\n"+gitpath2+" commit -m \""+commit_message+"\"")
+            os.system(gitpath2+" commit -m '"+commit_message+"'")
+            print("\n"+gitpath2+" commit -m '"+commit_message+"'")
             os.system(gitpath2+" push --all")
             print("\n"+gitpath2+" push --all")
             print("\n# Push Finished. \n")
