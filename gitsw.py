@@ -92,7 +92,7 @@ while True:
     elif event=='-CLEAR-':
         window['-OUTPUT-'].update('')    
     elif event=='-ABOUT-':
-        print('\n# event = ABOUT')
-        sg.popup('GitSW V01', 'Author : dhkima@higenmotor.com', 'Source : https://codeberg.org/dymaxionkim/gitsw')
+        window['-OUTPUT-'].update('')
+        window['-OUTPUT-'].update("GitSW - Github Client for Solidworks\nAuthor : dhkima@higenmotor.com\nSource : https://codeberg.org/dymaxionkim/gitsw\nMirror : https://github.com/dhkima-higenmotor/gitsw\nManual : https://codeberg.org/dymaxionkim/gitsw/src/branch/main/Manual")
 
 window.close()

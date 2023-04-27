@@ -51,42 +51,23 @@ git clone --depth=1 https://github.com/dhkima-higenmotor/gitsw.git D:\github\git
 cd /D D:\github\gitsw
 ```
 
-* Start `cmd` or `wt`, and type like that :
+## 6. Config gitsw
 
-```cmd
-# Modify Commit Messages
-code D:\github\gitsw\Config\commits
+* Start `config.bat` :
 
-# Check and Modify path of gitsw
-code D:\github\gitsw\Config\exepath
+![](img/config_GUI.png)
 
-# Modify Font and size
-code D:\github\gitsw\Config\font
-
-# Check and Modify path of `git.exe`
-code D:\github\gitsw\Config\gitpath
-
-# Modify Organizations
-code D:\github\gitsw\Config\organs
-
-# Modify Repositoies
-code D:\github\gitsw\Config\repos
-
-# Check and Modify path of Github root
-code D:\github\gitsw\Config\root
-
-# Check github.com
-code D:\github\gitsw\Config\server
-
-# Check and Modify GUI theme
-code D:\github\gitsw\Config\theme
-
-# Check and Modify list of users
-code D:\github\gitsw\Config\users
-
-# Write Github personal access token
-code D:\github\gitsw\Config\token
-```
+* **FONT** : "Font Name" Size
+* **GITPATH** : Location of `git.exe`
+* **ROOT** : Root path for local repositories
+* **SERVER** : github.com
+* **THEME** : GUI theme from [PySimpleGUI Themes](https://raw.githubusercontent.com/PySimpleGUI/PySimpleGUI/master/images/for_readme/ThemePreview.jpg)
+* **TOKEN** : Github personal access token
+* **LIST_COMMIT** : Reserve commit messages
+* **LIST_ORGANS** : Github organizations
+* **LIST_REPOS** : Your Repositories
+* **SAVE** : Save only current checked
 
 ## 6. Test
 
+* Start `gitsw.bat` :
