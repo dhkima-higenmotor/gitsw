@@ -93,6 +93,6 @@ while True:
         window['-OUTPUT-'].update('')    
     elif event=='-ABOUT-':
         window['-OUTPUT-'].update('')
-        window['-OUTPUT-'].update("# GitSW - Github Client for Solidworks\n# Author : \ndhkima@higenmotor.com\n# Source : \nhttps://codeberg.org/dymaxionkim/gitsw\n# Mirror : \nhttps://github.com/dhkima-higenmotor/gitsw\n# Manual : \nhttps://codeberg.org/dymaxionkim/gitsw/src/branch/main/Manual")
+        window['-OUTPUT-'].update("# GitSW\n# Github Client for Solidworks\n# Author : \ndhkima@higenmotor.com\n# Source : \nhttps://codeberg.org/dymaxionkim/gitsw\n# Mirror : \nhttps://github.com/dhkima-higenmotor/gitsw\n# Manual : \nhttps://codeberg.org/dymaxionkim/gitsw/src/branch/main/Manual")
 
 window.close()

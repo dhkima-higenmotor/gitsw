@@ -123,17 +123,25 @@ def git_push(repo,root,gitpath,commit_message,change_branch):
 
 def git_branch(repo,root,gitpath,change_branch):
     PATH_TARGET = root+"\\"+repo
-    os.chdir(PATH_TARGET)
-    os.system(gitpath+"\git.exe branch "+change_branch)
-    print(gitpath+"\git.exe branch "+change_branch)
-    os.system(gitpath+"\git.exe checkout "+change_branch)
-    print(gitpath+"\git.exe checkout "+change_branch)
-    return 0
+    if os.path.isdir(PATH_TARGET):
+        os.chdir(PATH_TARGET)
+        os.system(gitpath+"\git.exe branch "+change_branch)
+        print(gitpath+"\git.exe branch "+change_branch)
+        os.system(gitpath+"\git.exe checkout "+change_branch)
+        print(gitpath+"\git.exe checkout "+change_branch)
+        return 0
+    else:
+        print("# Not exists : \n"+PATH_TARGET)
+        return -1
 
 def git_merge(repo,root,gitpath,change_branch,change_merge):
     PATH_TARGET = root+"\\"+repo
-    os.chdir(PATH_TARGET)
-    os.system(gitpath+"\git.exe checkout "+change_branch)
-    print(gitpath+"\git.exe checkout "+change_branch)
-    os.system(gitpath+"\git.exe merge -Xtheirs "+change_merge)
-    return 0
+    if os.path.isdir(PATH_TARGET):
+        os.chdir(PATH_TARGET)
+        os.system(gitpath+"\git.exe checkout "+change_branch)
+        print(gitpath+"\git.exe checkout "+change_branch)
+        os.system(gitpath+"\git.exe merge -Xtheirs "+change_merge)
+        return 0
+    else:
+        print("# Not exists : \n"+PATH_TARGET)
+        return -1
