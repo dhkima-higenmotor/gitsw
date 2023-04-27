@@ -11,16 +11,16 @@ INPUT_WIDTH = 27
 OUTPUT_WIDTH = 40
 OUTPUT_HEIGHT = 15
 
-LIST_COMMIT = git_operation.read_config('commits')
+LIST_COMMIT = git_operation.read_config('list_commit')
 FONT = git_operation.read_config('font')[0]
 GITPATH = git_operation.read_config('gitpath')[0]
-LIST_ORGANS = git_operation.read_config('organs')
-LIST_REPOS = git_operation.read_config('repos')
+LIST_ORGANS = git_operation.read_config('list_organs')
+LIST_REPOS = git_operation.read_config('list_repos')
 ROOT = git_operation.read_config('root')[0]
 SERVER = git_operation.read_config('server')[0]
 THEME = git_operation.read_config('theme')[0]
 TOKEN = git_operation.read_config('token')[0]
-LIST_USERS = git_operation.read_config('users')
+LIST_USERS = git_operation.read_config('list_users')
 
 # Theme
 sg.theme(THEME)
@@ -63,6 +63,7 @@ left_column = [
     [sg.Radio('SERVER',1,key="-SERVER-",enable_events=True)],
     [sg.Radio('THEME',1,key="-THEME-",enable_events=True)],
     [sg.Radio('TOKEN',1,key="-TOKEN-",enable_events=True)],
+    [sg.Radio('LIST_USERS',1,key="-LIST_USERS-",enable_events=True)],
     [sg.Radio('LIST_COMMIT',1,key="-LIST_COMMIT-",enable_events=True)],
     [sg.Radio('LIST_ORGANS',1,key="-LIST_ORGANS-",enable_events=True)],
     [sg.Radio('LIST_REPOS',1,key="-LIST_REPOS-",enable_events=True)]
@@ -100,11 +101,13 @@ while True:
     elif event=='-TOKEN-':
         display('token')
     elif event=='-LIST_COMMIT-':
-        display('commits')
+        display('list_commit')
+    elif event=='-LIST_USERS-':
+        display('list_users')
     elif event=='-LIST_ORGANS-':
-        display('organs')
+        display('list_organs')
     elif event=='-LIST_REPOS-':
-        display('repos')
+        display('list_repos')
     elif event=='-SAVE-':
         save_config()
 
