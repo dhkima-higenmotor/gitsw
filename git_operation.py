@@ -1,4 +1,5 @@
 import os
+import webbrowser
 
 def read_config(file_name):
     with open('./Config/'+file_name,'r') as f:
@@ -110,6 +111,7 @@ def git_make(server,organ,repo,user,token,root,gitpath,exepath):
             print("https://"+server+"/"+organ+"/"+repo+"/settings")
             print("\n# Check Repository Setting to use LFS :")
             print("https://"+server+"/"+organ+"/"+repo+"/settings")
+            webbrowser.open("https://"+server+"/"+organ+"/"+repo+"/settings")
             return 0
         else:
             print("\n# Fail. \n")
