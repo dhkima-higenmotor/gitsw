@@ -31,10 +31,29 @@ gh config set git_protocol https
 ## 3. Install Anaconda3 or Miniconda3
 
 * Download [Anaconda3-2023.03-1-Windows-x86_64.exe](https://repo.anaconda.com/archive/Anaconda3-2023.03-1-Windows-x86_64.exe) or [Miniconda3-latest-Windows-x86_64.exe](https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe)and install.
+
+* **Anaconda** : 3~4GB needed.
+* **Miniconda** : 0.3~0.5GB needed.
+
 * Start `Anaconda Prompt (Anaconda3)` or `Anaconda Prompt (Miniconda3)`, and type like that :
 
 ```cmd
-pip install PySimpleGUI
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+conda config --remove channels defaults
+conda config --show channels
+conda update --all
+```
+
+> By using conda-forge, license restrictions can be circumvented.
+
+[TERMS OF SERVICE](https://legal.anaconda.com/policies/en/?name=terms-of-service)
+
+* Install [PySimpleGUI](https://anaconda.org/conda-forge/pysimplegui)
+
+```cmd
+conda install pysimplegui
+conda list pysimplegui
 ```
 
 ## 4. Install VScode (Optional)
