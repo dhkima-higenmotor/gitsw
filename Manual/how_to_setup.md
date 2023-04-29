@@ -28,10 +28,10 @@ gh config set git_protocol https
 * `<Github_Token>` : [Use what created in Github personal access token](https://docs.github.com/ko/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
 
-## 3. Install Anaconda3
+## 3. Install Anaconda3 or Miniconda3
 
-* Download [Anaconda3-2023.03-1-Windows-x86_64.exe](https://repo.anaconda.com/archive/Anaconda3-2023.03-1-Windows-x86_64.exe) and install.
-* Start `Anaconda Prompt (Anaconda3)`, and type like that :
+* Download [Anaconda3-2023.03-1-Windows-x86_64.exe](https://repo.anaconda.com/archive/Anaconda3-2023.03-1-Windows-x86_64.exe) or [Miniconda3-latest-Windows-x86_64.exe](https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe)and install.
+* Start `Anaconda Prompt (Anaconda3)` or `Anaconda Prompt (Miniconda3)`, and type like that :
 
 ```cmd
 pip install PySimpleGUI
@@ -52,6 +52,17 @@ cd /D D:\github\gitsw
 ```
 
 ## 6. Config gitsw
+
+* Start `cmd` or `wt`, and type like that :
+
+```cmd
+cd /D D:\github\gitsw
+echo <condapath>> condapath
+echo <token>> .\Config\token
+``` 
+
+* <condapath> : Location of Python (Anaconda or Miniconda)
+* <token> : Github personal access token
 
 * Start `config.bat` :
 
