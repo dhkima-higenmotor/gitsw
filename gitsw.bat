@@ -1,6 +1,7 @@
 @echo off
 
-set root=C:\ProgramData\Anaconda3
+REM set root=C:\ProgramData\Anaconda3
+set /p root=<condapath
 call %root%\Scripts\activate.bat %root%
 
 REM call conda env list
