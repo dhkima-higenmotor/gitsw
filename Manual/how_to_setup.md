@@ -80,8 +80,8 @@ echo <condapath>> condapath
 echo <token>> .\Config\token
 ``` 
 
-* <condapath> : Location of Python (Anaconda or Miniconda)
-* <token> : Github personal access token
+* `<condapath>` : Location of Python (Anaconda or Miniconda)
+* `<token>` : Github personal access token
 
 * Start `config.bat` :
 
