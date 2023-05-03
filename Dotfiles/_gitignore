@@ -89,10 +89,18 @@ trail.txt.*
 *.pbk
 
 # 2D CAD
+2D/
+DXF/
+DWG/
+PDF/
 [#]*.dxf
 *.dwl
 *dwl2
 *.dxf.original
+
+# 3D CAD
+STEP/
+STP/
 
 # Compiler
 build/
