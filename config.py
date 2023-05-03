@@ -19,8 +19,16 @@ LIST_REPOS = git_operation.read_config('list_repos')
 ROOT = git_operation.read_config('root')[0]
 SERVER = git_operation.read_config('server')[0]
 THEME = git_operation.read_config('theme')[0]
-TOKEN = git_operation.read_config('token')[0]
 LIST_USERS = git_operation.read_config('list_users')
+# token file
+tokenpath = './Config/token'
+print(tokenpath)
+if os.path.isfile(tokenpath) == False:
+    f = open(tokenpath,'w')
+    f.write("token")
+    f.close()
+else:
+    TOKEN = git_operation.read_config('token')[0]
 
 # Theme
 sg.theme(THEME)
@@ -107,8 +115,7 @@ while True:
     elif event=='-LIST_ORGANS-':
         display('list_organs')
     elif event=='-LIST_REPOS-':
-        #display('list_repos')
-        window['-OUTPUT-'].update("wgfwergfew????????????????")
+        display('list_repos')
     elif event=='-SAVE-':
         save_config()
 
