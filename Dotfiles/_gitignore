@@ -99,4 +99,5 @@ build/
 
 # Backup
 *.bak
+*.BAK
 

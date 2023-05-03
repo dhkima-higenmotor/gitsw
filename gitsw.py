@@ -15,10 +15,9 @@ INPUT_WIDTH = 27
 OUTPUT_WIDTH = 40
 LIST_USERS = git_operation.read_config('list_users')
 LIST_ORGANS = git_operation.read_config('list_organs')
-LIST_ORGANS.extend(LIST_USERS)
 LIST_REPOS = git_operation.read_config('list_repos')
 LIST_BRANCH = LIST_USERS.copy()
-LIST_BRANCH.insert(0,'main')
+LIST_BRANCH.append("main")
 LIST_COMMIT = git_operation.read_config('list_commit')
 SERVER = git_operation.read_config('server')[0]
 ROOT = git_operation.read_config('root')[0]
