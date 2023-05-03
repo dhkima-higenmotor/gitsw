@@ -124,13 +124,18 @@ def git_push(repo,root,gitpath,commit_message,change_branch):
         try:
             os.chdir(PATH_TARGET)
             os.system(gitpath2+" checkout "+change_branch)
-            print("\n"+gitpath2+" checkout "+change_branch)
+            print("\ngit checkout "+change_branch)
             os.system(gitpath2+" add --all")
-            print("\n"+gitpath2+" add --all")
-            os.system(gitpath2+" commit -m "+'"'+commit_message+'"')
-            print("\n"+gitpath2+" commit -m "+'"'+commit_message+'"')
-            os.system(gitpath2+" push --all")
-            print("\n"+gitpath2+" push --all")
+            print("\ngit add --all")
+            print("\ngit status")
+            os.system(gitpath2+" status")
+            temp = gitpath2+" commit -m "+'\''+commit_message+'\''
+            os.system(temp)
+            print("\ngit commit -m "+'"'+commit_message+'"')
+            print("\ngit status")
+            os.system(gitpath2+" status")
+            os.system(gitpath2+" push")
+            print("\n"+gitpath2+" push")
             print("\n# Push Finished. \n")
             return 0
         except:
