@@ -11,4 +11,3 @@ call python config.py
 
 REM pause
 exit
-
