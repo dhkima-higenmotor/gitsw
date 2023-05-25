@@ -2,76 +2,76 @@
 * text=auto
 
 ### Images
-#*.jpg filter=lfs diff=lfs merge=lfs -text
-#*.png filter=lfs diff=lfs merge=lfs -text
-#*.gif filter=lfs diff=lfs merge=lfs -text
-*.bmp filter=lfs diff=lfs merge=lfs -text
-*.tiff filter=lfs diff=lfs merge=lfs -text
-*.svg filter=lfs diff=lfs merge=lfs -text
+#*.jpg filter=lfs diff=lfs merge=lfs -text lockable
+#*.png filter=lfs diff=lfs merge=lfs -text lockable
+#*.gif filter=lfs diff=lfs merge=lfs -text lockable
+*.bmp filter=lfs diff=lfs merge=lfs -text lockable
+*.tiff filter=lfs diff=lfs merge=lfs -text lockable
+*.svg filter=lfs diff=lfs merge=lfs -text lockable
  
 ### pdf
-*.pdf filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text lockable
  
 ### Compressed files
-*.zip filter=lfs diff=lfs merge=lfs -text
-*.gz filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text lockable
+*.gz filter=lfs diff=lfs merge=lfs -text lockable
  
 ### MS Office
-*.ppt filter=lfs diff=lfs merge=lfs -text
-*.pptx filter=lfs diff=lfs merge=lfs -text
-*.doc filter=lfs diff=lfs merge=lfs -text
-*.docx filter=lfs diff=lfs merge=lfs -text
-*.xls filter=lfs diff=lfs merge=lfs -text
-*.xlsx filter=lfs diff=lfs merge=lfs -text
+*.ppt filter=lfs diff=lfs merge=lfs -text lockable
+*.pptx filter=lfs diff=lfs merge=lfs -text lockable
+*.doc filter=lfs diff=lfs merge=lfs -text lockable
+*.docx filter=lfs diff=lfs merge=lfs -text lockable
+*.xls filter=lfs diff=lfs merge=lfs -text lockable
+*.xlsx filter=lfs diff=lfs merge=lfs -text lockable
  
 ### Hancom Office
-*.hwp filter=lfs diff=lfs merge=lfs -text
+*.hwp filter=lfs diff=lfs merge=lfs -text lockable
  
 ### Libre Office
-*.odt filter=lfs diff=lfs merge=lfs -text
+*.odt filter=lfs diff=lfs merge=lfs -text lockable
  
 ### Blender
-*.blend filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text lockable
  
 ### AutoCAD
-*.dxf filter=lfs diff=lfs merge=lfs -text
-*.dwg filter=lfs diff=lfs merge=lfs -text
+*.dxf filter=lfs diff=lfs merge=lfs -text lockable
+*.dwg filter=lfs diff=lfs merge=lfs -text lockable
  
 ### PADS
-*.pcb filter=lfs diff=lfs merge=lfs -text
-*.dsn filter=lfs diff=lfs merge=lfs -text
-*.pho filter=lfs diff=lfs merge=lfs -text
-*.rep filter=lfs diff=lfs merge=lfs -text
-*.gbr filter=lfs diff=lfs merge=lfs -text
+*.pcb filter=lfs diff=lfs merge=lfs -text lockable
+*.dsn filter=lfs diff=lfs merge=lfs -text lockable
+*.pho filter=lfs diff=lfs merge=lfs -text lockable
+*.rep filter=lfs diff=lfs merge=lfs -text lockable
+*.gbr filter=lfs diff=lfs merge=lfs -text lockable
 
 ### SOLIDWORKS
-*.SLDPRT filter=lfs diff=lfs merge=lfs -text
-*.sldprt filter=lfs diff=lfs merge=lfs -text
-*.SLDASM filter=lfs diff=lfs merge=lfs -text
-*.sldasm filter=lfs diff=lfs merge=lfs -text
-*.SLDDRW filter=lfs diff=lfs merge=lfs -text
-*.slddrw filter=lfs diff=lfs merge=lfs -text
+*.SLDPRT filter=lfs diff=lfs merge=lfs -text lockable
+*.sldprt filter=lfs diff=lfs merge=lfs -text lockable
+*.SLDASM filter=lfs diff=lfs merge=lfs -text lockable
+*.sldasm filter=lfs diff=lfs merge=lfs -text lockable
+*.SLDDRW filter=lfs diff=lfs merge=lfs -text lockable
+*.slddrw filter=lfs diff=lfs merge=lfs -text lockable
 
 ### FreeCAD
-*.fcstd filter=lfs diff=lfs merge=lfs -text
+*.fcstd filter=lfs diff=lfs merge=lfs -text lockable
  
 ### PTC CREO
-*.asm filter=lfs diff=lfs merge=lfs -text
-*.prt filter=lfs diff=lfs merge=lfs -text
-*.drw filter=lfs diff=lfs merge=lfs -text
-*.asm.1 filter=lfs diff=lfs merge=lfs -text
-*.prt.1 filter=lfs diff=lfs merge=lfs -text
-*.drw.1 filter=lfs diff=lfs merge=lfs -text
-*.asm.* filter=lfs diff=lfs merge=lfs -text
-*.prt.* filter=lfs diff=lfs merge=lfs -text
-*.drw.* filter=lfs diff=lfs merge=lfs -text
+*.asm filter=lfs diff=lfs merge=lfs -text lockable
+*.prt filter=lfs diff=lfs merge=lfs -text lockable
+*.drw filter=lfs diff=lfs merge=lfs -text lockable
+*.asm.1 filter=lfs diff=lfs merge=lfs -text lockable
+*.prt.1 filter=lfs diff=lfs merge=lfs -text lockable
+*.drw.1 filter=lfs diff=lfs merge=lfs -text lockable
+*.asm.* filter=lfs diff=lfs merge=lfs -text lockable
+*.prt.* filter=lfs diff=lfs merge=lfs -text lockable
+*.drw.* filter=lfs diff=lfs merge=lfs -text lockable
  
 ### 3D Neutral
-*.stp filter=lfs diff=lfs merge=lfs -text
-*.step filter=lfs diff=lfs merge=lfs -text
-*.igs filter=lfs diff=lfs merge=lfs -text
-*.iges filter=lfs diff=lfs merge=lfs -text
-*.STP filter=lfs diff=lfs merge=lfs -text
-*.STEP filter=lfs diff=lfs merge=lfs -text
-*.IGS filter=lfs diff=lfs merge=lfs -text
-*.IGES filter=lfs diff=lfs merge=lfs -text
+*.stp filter=lfs diff=lfs merge=lfs -text lockable
+*.step filter=lfs diff=lfs merge=lfs -text lockable
+*.igs filter=lfs diff=lfs merge=lfs -text lockable
+*.iges filter=lfs diff=lfs merge=lfs -text lockable
+*.STP filter=lfs diff=lfs merge=lfs -text lockable
+*.STEP filter=lfs diff=lfs merge=lfs -text lockable
+*.IGS filter=lfs diff=lfs merge=lfs -text lockable
+*.IGES filter=lfs diff=lfs merge=lfs -text lockable

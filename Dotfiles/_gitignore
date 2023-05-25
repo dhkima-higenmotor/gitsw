@@ -102,6 +102,9 @@ PDF/
 STEP/
 STP/
 
+# BOM
+BOM/
+
 # Compiler
 build/
 
@@ -109,3 +112,21 @@ build/
 *.bak
 *.BAK
 
+# Archives
+*.zip
+*.7z
+*.rar
+*.arj
+*.lzh
+*.tgz
+*.tar
+*.gz
+*.cab
+*.pak
+*.apk
+*.zool
+*.ais
+*.psz
+*.sea
+*.hgx
+*.jas
