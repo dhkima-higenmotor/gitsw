@@ -1,3 +1,8 @@
 __pycache__/
-token
 .ipynb_checkpoints/
+dist/
+build/
+
+token
+*.spec
+*.exe
