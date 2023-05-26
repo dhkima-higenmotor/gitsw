@@ -1,8 +1,141 @@
-__pycache__/
+# Solidworks
+~$*
+~$*.SLDASM
+~$*.SLDPRT
+__Previews/
+*.CWR
+*.DSP
+*.ELF
+*.GCF
+*.GEN
+*.IDA
+*.LCD
+*.LDS
+*.LOG
+*.MAS
+*.MFC
+*.OUT
+*.PC0
+*.SL3
+*.SL4
+*.STE
+*.STG
+PerformanceLog.txt
+
+# Jupyter Notebook
 .ipynb_checkpoints/
+
+# Python
+__pycache__/
 dist/
 build/
-
-token
-*.spec
 *.exe
+
+# CAE
+netgen.prof
+*.pvtu
+*.vtu
+partitioning.*/
+
+# Movie
+*.avi
+*.mp4
+*.mpg
+*.mpeg
+
+# Blender
+*.BMC
+*.hdr
+*.rsl
+
+### Libreoffice
+*.odp#
+
+# Windows
+*.lnk
+
+# PTC Creo
+ApplicationSettings.db
+std.out
+current_session.pro
+datafile.ers
+errors.lst.*
+fix_params.log
+*.acc
+*.crc
+*.err.*
+*.idx
+*.inf.*
+*.log.*
+std.err
+std.out
+trail.txt
+trail.txt.*
+*.xpr
+*.tst
+*.acl
+*.lst
+*.mbx
+*.ncl.*
+*.ncl_a.tab
+*.ncl_b.tab
+*.ncl_c.tab
+*.ncl_x.tab
+*.ncl_y.tab
+*.ncl_z.tab
+*.tap
+*.m_p
+*.idx
+*.log
+*.lsl.*
+*.bak
+*.pcf
+*.inf
+*.xml
+*.pbk
+
+# 2D CAD
+2D/
+DXF/
+DWG/
+PDF/
+[#]*.dxf
+*.dwl
+*dwl2
+*.dxf.original
+
+# BOM
+BOM/
+
+# 3D CAD
+STEP/
+STP/
+
+# Compiler
+build/
+
+# Backup
+*.bak
+*.BAK
+
+# Archives
+*.zip
+*.7z
+*.rar
+*.arj
+*.lzh
+*.tgz
+*.tar
+*.gz
+*.cab
+*.pak
+*.apk
+*.zool
+*.ais
+*.psz
+*.sea
+*.hgx
+*.jas
+
+# gitsw
+token
