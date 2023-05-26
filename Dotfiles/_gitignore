@@ -93,6 +93,7 @@ trail.txt.*
 DXF/
 DWG/
 PDF/
+BOM/
 [#]*.dxf
 *.dwl
 *dwl2
