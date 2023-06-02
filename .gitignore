@@ -29,6 +29,7 @@ PerformanceLog.txt
 __pycache__/
 dist/
 build/
+*.spec
 *.exe
 
 # CAE
