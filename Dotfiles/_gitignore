@@ -111,3 +111,5 @@ build/
 *.bak
 *.BAK
 
+# ETC
+*.tmp
