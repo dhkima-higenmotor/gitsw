@@ -25,13 +25,6 @@ PerformanceLog.txt
 # Jupyter Notebook
 .ipynb_checkpoints/
 
-# Python
-__pycache__/
-dist/
-build/
-*.spec
-*.exe
-
 # CAE
 netgen.prof
 *.pvtu
@@ -51,6 +44,7 @@ partitioning.*/
 
 ### Libreoffice
 *.odp#
+*.CSV
 
 # Windows
 *.lnk
@@ -100,17 +94,19 @@ trail.txt.*
 DXF/
 DWG/
 PDF/
+BOM/
 [#]*.dxf
 *.dwl
 *dwl2
 *.dxf.original
 
-# BOM
-BOM/
-
 # 3D CAD
 STEP/
 STP/
+STP_ASM/
+
+# Documents
+DOC/
 
 # Compiler
 build/
@@ -138,5 +134,8 @@ build/
 *.hgx
 *.jas
 
-# gitsw
-token
+# ETC
+*.tmp
+__pycache__/
+dist/
+*.spec
