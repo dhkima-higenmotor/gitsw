@@ -139,6 +139,4 @@ build/
 __pycache__/
 dist/
 *.spec
-Config/list_repos
-Config/list_users
 Config/token
