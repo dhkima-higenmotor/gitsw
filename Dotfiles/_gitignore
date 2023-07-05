@@ -103,6 +103,10 @@ BOM/
 # 3D CAD
 STEP/
 STP/
+STP_ASM/
+
+# Documents
+DOC/
 
 # Compiler
 build/
